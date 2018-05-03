@@ -14,5 +14,12 @@ if [ "$state" == "Charging" ]
       chargestate="discharging"
 fi
 
-echo [battery $percentageleft, $timeleft]
+if [ $timeleft == ""]
+  then
+    echo [battery $percentageleft]
+  else
+    echo [battery $percentageleft, $timeleft]
+fi
+
+
 
