@@ -82,6 +82,7 @@ def loop_update_latest(startingblock):
 
 #None
 def timeout(seconds):
+    #TODO: Add optional error message when timing out.
     msg = "Failed to get block from API. Waiting "+str(seconds)+" seconds before trying again."
     slowflush(msg, PIPEREADER)
     time.sleep(seconds)
